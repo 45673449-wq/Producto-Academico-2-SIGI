@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producto Académico 2 - SIGI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      padding: 6px 18px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 24px 16px;
+      transition: transform 0.2s, background 0.2s;
+      cursor: default;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .footer {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(76, 175, 80, 0.2);
+      border: 1px solid rgba(76, 175, 80, 0.4);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      margin-bottom: 32px;
+      color: #a5d6a7;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #66bb6a;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Universidad Continental</div>
+    <h1>Producto Académico 2</h1>
+    <p class="subtitle">Sistema de Información de Gestión Institucional (SIGI)</p>
+
+    <div class="status">
+      <span class="status-dot"></span>
+      Sistema en línea
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Gestión de Datos</h3>
+        <p>Administración de información institucional</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔍</div>
+        <h3>Consultas</h3>
+        <p>Acceso a reportes y análisis del sistema</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>Configuración</h3>
+        <p>Parámetros y ajustes del sistema</p>
+      </div>
+    </div>
+
+    <p class="footer">SIGI &mdash; Producto Académico 2 &copy; 2026</p>
+  </div>
+</body>
+</html>
