@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Producto Académico 2 - SIGI</title>
+  <title>SIGI - Panel de Control</title>
   <style>
     * {
       margin: 0;
@@ -67,18 +67,27 @@
       margin-bottom: 40px;
     }
 
+    /* Estilo para los enlaces de las tarjetas */
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
     .card {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 12px;
       padding: 24px 16px;
       transition: transform 0.2s, background 0.2s;
-      cursor: default;
+      cursor: pointer;
+      height: 100%;
     }
 
     .card:hover {
       transform: translateY(-4px);
       background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.4);
     }
 
     .card .icon {
@@ -132,33 +141,42 @@
 <body>
   <div class="container">
     <div class="badge">Universidad Continental</div>
-    <h1>Producto Académico 2</h1>
-    <p class="subtitle">Sistema de Información de Gestión Institucional (SIGI)</p>
+    <h1>Panel Principal</h1>
+    <p class="subtitle">Sistema de Gestión Inteligente de Inventarios (SIGI)</p>
 
     <div class="status">
       <span class="status-dot"></span>
-      Sistema en línea
+      Conectado como Administrador
     </div>
 
     <div class="cards">
-      <div class="card">
-        <div class="icon">📊</div>
-        <h3>Gestión de Datos</h3>
-        <p>Administración de información institucional</p>
-      </div>
-      <div class="card">
-        <div class="icon">🔍</div>
-        <h3>Consultas</h3>
-        <p>Acceso a reportes y análisis del sistema</p>
-      </div>
+      <!-- BOTÓN GESTIÓN DE DATOS -->
+      <a href="/gestion" class="card-link">
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>Gestión de Datos</h3>
+          <p>Ver inventario y control de productos</p>
+        </div>
+      </a>
+
+      <!-- BOTÓN CONSULTAS -->
+      <a href="/consultas" class="card-link">
+        <div class="card">
+          <div class="icon">🔍</div>
+          <h3>Consultas</h3>
+          <p>Reportes de movimientos y Kardex</p>
+        </div>
+      </a>
+
+      <!-- BOTÓN CONFIGURACIÓN -->
       <div class="card">
         <div class="icon">⚙️</div>
         <h3>Configuración</h3>
-        <p>Parámetros y ajustes del sistema</p>
+        <p>Ajustes de perfil y sistema</p>
       </div>
     </div>
 
-    <p class="footer">SIGI &mdash; Producto Académico 2 &copy; 2026</p>
+    <p class="footer">SIGI &mdash; Producto Académico 2 &copy; 2024</p>
   </div>
 </body>
 </html>

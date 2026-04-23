@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGI - Inventario</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #1a237e; color: white; padding: 20px; }
+        .container { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; color: #333; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background: #3949ab; color: white; }
+        .back-btn { color: #a5d6a7; text-decoration: none; border: 1px solid #a5d6a7; padding: 8px 15px; border-radius: 5px; display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/dashboard" class="back-btn">← Volver al Panel</a>
+        <h1>Gestión de Inventario (Kardex)</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody id="tablaBody"></tbody>
+        </table>
+    </div>
+    <script>
+        fetch('/api/productos')
+            .then(res => res.json())
+            .then(data => {
+                const body = document.getElementById('tablaBody');
+                data.forEach(p => {
+                    body.innerHTML += `<tr>
+                        <td>${p.sku}</td>
+                        <td>${p.nombre}</td>
+                        <td>${p.categoria}</td>
+                        <td>S/ ${p.precio}</td>
+                        <td style="font-weight:bold; color:${p.stock < 5 ? 'red':'green'}">${p.stock}</td>
+                    </tr>`;
+                });
+            });
+    </script>
+</body>
+</html>
